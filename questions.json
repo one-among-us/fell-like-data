@@ -6,10 +6,12 @@
       "question": "Init Question",
       "answers": [
         {
+          "id": "ans_quq",
           "answer": "quq",
           "jump": "quq"
         },
         {
+          "id": "ans_qwq",
           "answer": "qwq",
           "jump": "qwq"
         }
@@ -20,6 +22,7 @@
       "question": "quq",
       "answers": [
         {
+          "id": "ans_qwq",
           "answer": "qwq",
           "jump": "qwq"
         }
@@ -30,6 +33,7 @@
       "question": "qwq",
       "answers": [
         {
+          "id": "ans_quq",
           "answer": "quq",
           "jump": "quq"
         }
