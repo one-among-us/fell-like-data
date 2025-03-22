@@ -3,39 +3,662 @@
   "questions": [
     {
       "id": "init",
-      "question": "Init Question",
+      "question": "Have you eaten in the last four hours?",
       "answers": [
         {
-          "id": "ans_quq",
-          "answer": "quq",
-          "jump": "quq"
+          "id": "ans_Medication",
+          "answer": "Yes. Next question!",
+          "jump": "Medication"
         },
         {
-          "id": "ans_qwq",
-          "answer": "qwq",
-          "jump": "qwq"
+          "id": "ans_Snack",
+          "answer": "I could use a snack.",
+          "jump": "Snack"
+        },
+        {
+          "id": "ans_Meal",
+          "answer": "No, I need a meal.",
+          "jump": "Meal"
         }
       ]
     },
     {
-      "id": "quq",
-      "question": "quq",
+      "id": "Medication",
+      "question": "Have you taken any medication you need to take?",
       "answers": [
         {
-          "id": "ans_qwq",
-          "answer": "qwq",
-          "jump": "qwq"
+          "id": "ans_Water",
+          "answer": "Yes, I'm all caught up on any medication I need to take.",
+          "jump": "Water"
+        },
+        {
+          "id": "ans_Meds",
+          "answer": "No, I need to take my pill.",
+          "jump": "Meds"
         }
       ]
     },
     {
-      "id": "qwq",
-      "question": "qwq",
+      "id": "Water",
+      "question": "Drink a glass of whatever liquid you like best. Water is ideal, but don't beat yourself up if you'd rather have tea, soda, juice, or milk. Soda will actually make you feel thirstier, but if it's easier for you, then that's okay!",
       "answers": [
         {
-          "id": "ans_quq",
-          "answer": "quq",
-          "jump": "quq"
+          "id": "ans_Sleep",
+          "answer": "Okay, I did it.",
+          "jump": "Sleep"
+        }
+      ]
+    },
+    {
+      "id": "Sleep",
+      "question": "Can you take a guess at how many hours you've slept out of the last 24?",
+      "description": "Everyone is an individual with different sleep schedules, but most people need 8 hours of relatively uninterrupted sleep. If you had less than that, and/or woke up frequently, and/or had nightmares, it might help you to take a nap.",
+      "answers": [
+        {
+          "id": "ans_Pain",
+          "answer": "I am well-rested. Next question!",
+          "jump": "Pain"
+        },
+        {
+          "id": "ans_Nap",
+          "answer": "I need a nap.",
+          "jump": "Nap"
+        }
+      ]
+    },
+    {
+      "id": "Pain",
+      "question": "Are you in pain?",
+      "answers": [
+        {
+          "id": "ans_Discomfort",
+          "answer": "No, my body feels fine.",
+          "jump": "Discomfort"
+        },
+        {
+          "id": "ans_Ow",
+          "answer": "Yes, something hurts",
+          "jump": "Ow"
+        }
+      ]
+    },
+    {
+      "id": "Discomfort",
+      "question": "Is something about your environment distressing or uncomfortable?",
+      "description": "Next we're going to deal with other types of physical discomfort you may be in.",
+      "answers": [
+        {
+          "id": "ans_Environment",
+          "answer": "Yes, my surroundings are less than ideal.",
+          "jump": "Environment"
+        },
+        {
+          "id": "ans_Cleanliness",
+          "answer": "No, it seems fine here to me.",
+          "jump": "Cleanliness"
+        }
+      ]
+    },
+    {
+      "id": "Do_You_Know",
+      "question": "Now we've taken care of the physical reasons that you're not feeling well. Now we're going to deal with the emotional ones.",
+      "description": "Obviously, this is a general guide, and can't pinpoint your exact problem. But troubleshooting is a good practice, and we're going to do our best together.<br/>In my experience, most of the people who would need a flow chart like this have a mental health problem of some type, so these questions are geared towards common mental health problems. You, of course, might have different needs, but starting here can't hurt.<br/>Do you know why you're in a bad mood, or not feeling well emotionally? (Remember, any answer is okay!)",
+      "answers": [
+        {
+          "id": "ans_I_do_know",
+          "answer": "Yes, there's something on my mind.",
+          "jump": "I_do_know"
+        },
+        {
+          "id": "ans_I_do_not_know",
+          "answer": "No, I don't know the reason.",
+          "jump": "I_do_not_know"
+        }
+      ]
+    },
+    {
+      "id": "Anxious",
+      "question": "Do you feel anxious, nervous, keyed-up, paranoid, scared, or on edge?",
+      "answers": [
+        {
+          "id": "ans_Specific",
+          "answer": "Yes, I feel anxious about something specific.",
+          "jump": "Specific"
+        },
+        {
+          "id": "ans_Not_Specific",
+          "answer": "Yes, but I don't know why.",
+          "jump": "Not_Specific"
+        },
+        {
+          "id": "ans_Triggered",
+          "answer": "No, I don't feel very anxious.",
+          "jump": "Triggered"
+        },
+        {
+          "id": "ans_Triggered_2",
+          "answer": "I was feeling anxious, but I did my best to take care of myself. I'm ready for the next question.",
+          "jump": "Triggered"
+        }
+      ]
+    },
+    {
+      "id": "Triggered",
+      "question": "Do you feel triggered? Are you having flashbacks? Is something traumatic or upsetting from the past weighing on your mind? Did you have a vivid nightmare?",
+      "answers": [
+        {
+          "id": "ans_I_am_triggered",
+          "answer": "Yes, I feel triggered",
+          "jump": "I_am_triggered"
+        },
+        {
+          "id": "ans_Dissociated",
+          "answer": "No, I'm not feeling triggered.",
+          "jump": "Dissociated"
+        },
+        {
+          "id": "ans_I_am_triggered_2",
+          "answer": "I was feeling triggered, but I did my best to take care of myself. I'm ready for the next question.",
+          "jump": "I_am_triggered"
+        }
+      ]
+    },
+    {
+      "id": "Dissociated",
+      "question": "Are you feeling dissociated, depersonalized, or derealized? Do you feel far away, foggy, or unreal? Are you not sure who you are?",
+      "answers": [
+        {
+          "id": "ans_Grounding",
+          "answer": "Yes, I'm dissociated.",
+          "jump": "Grounding"
+        },
+        {
+          "id": "ans_Depressed",
+          "answer": "No, I don't feel like that.",
+          "jump": "Depressed"
+        },
+        {
+          "id": "ans_Depressed_2",
+          "answer": "I was feeling dissociated, but I did my best to take care of myself. I'm ready for the next question.",
+          "jump": "Depressed"
+        }
+      ]
+    },
+    {
+      "id": "Depressed",
+      "question": "Are you feeling depressed, sad, or upset?",
+      "answers": [
+        {
+          "id": "ans_Depress_Fixes",
+          "answer": "Yes, I'm feeling depressed.",
+          "jump": "Depress_Fixes"
+        },
+        {
+          "id": "ans_Lonely",
+          "answer": "No, I'm not very depressed.",
+          "jump": "Lonely"
+        }
+      ]
+    },
+    {
+      "id": "Lonely",
+      "question": "Are you feeling lonely or in need of attention?",
+      "answers": [
+        {
+          "id": "ans_Loneliness_Fixes",
+          "answer": "Yes, I'm feeling lonely.",
+          "jump": "Loneliness_Fixes"
+        },
+        {
+          "id": "ans_Foggy",
+          "answer": "No, I'm not very lonely. Next question!",
+          "jump": "Foggy"
+        }
+      ]
+    },
+    {
+      "id": "Foggy",
+      "question": "Are you feeling foggy?",
+      "answers": [
+        {
+          "id": "ans_Exercise",
+          "answer": "Yes, I feel foggy.",
+          "jump": "Exercise"
+        },
+        {
+          "id": "ans_Pet",
+          "answer": "No, my head feels pretty clear.",
+          "jump": "Pets"
+        }
+      ]
+    },
+    {
+      "id": "Pets",
+      "question": "Do you have pets?",
+      "answers": [
+        {
+          "id": "ans_Play_With_Cats",
+          "answer": "Yes, I've got animals in my house.",
+          "jump": "Play_With_Cats"
+        },
+        {
+          "id": "ans_Fun",
+          "answer": "No, no pets for me!",
+          "jump": "Fun"
+        }
+      ]
+    },
+    {
+      "id": "Fun",
+      "question": "Take half an hour and do whatever you want to do right now.",
+      "description": "This can be anything: crafts, watching TV, laying on the couch, taking a walk, playing Farmville... your choices are literally endless!",
+      "answers": [
+        {
+          "id": "ans_Reassess",
+          "answer": "I did 30 minutes of fun and now I'm ready to move on to the next step.",
+          "jump": "Reassess"
+        }
+      ]
+    },
+    {
+      "id": "Reassess",
+      "question": "We've reached the end of this self care guide.",
+      "description": "<p>It's time to reassess. Maybe now that you've done all this self care, you feel better-- great! Maybe you don't, and that's okay too. But hopefully you've cleared things up and you know what to do next to take care of yourself.</p><p>You deserve self care, so even if it's hard, do your best!</p>",
+      "answers": [
+        {
+          "id": "ans_End",
+          "answer": "Good luck!",
+          "jump": "Reassess"
+        }
+      ]
+    },
+    {
+      "id": "Snack",
+      "question": "hen you need a snack, just pop some easy food in your mouth.",
+      "description": "If there's a specific food you want, it's okay to eat it! You don't have to eat perfectly healthy all the time-- no one does! Just also use your brain a little, and notice the quantity you're eating, and how healthy it is for you. You're probably just fine at trusting your gut and knowing what your body needs.",
+      "answers": [
+        {
+          "id": "ans_Finish_Snack",
+          "answer": "Okay, I finished my snack.",
+          "jump": "Medication"
+        }
+      ]
+    },
+    {
+      "id": "Meal",
+      "question": "You haven't eaten in a little while, and your body needs fuel. It's time for breakfast, lunch, or dinner.",
+      "description": "If there's a specific food you want, it's okay to eat it! You don't have to eat perfectly healthy all the time-- no one does! Just also use your brain a little, and notice the quantity you're eating, and how healthy it is for you. You're probably just fine at trusting your gut and knowing what your body needs.",
+      "answers": [
+        {
+          "id": "ans_Finish_Meal",
+          "answer": "I finished my meal, and I'm ready for the next step.",
+          "jump": "Medication"
+        },
+        {
+          "id": "ans_Need_Meal_Help",
+          "answer": "I need some help",
+          "jump": "I_need_some_help"
+        }
+      ]
+    },
+    {
+      "id": "Meds",
+      "question": "Medication needs to be taken on schedule, or your body might react negatively.",
+      "description": "<p>Take some time now to take any pills, do any tests or injections, or apply any ointments prescribed by your doctor.</p><p>If this is a persistent problem for you, you may want to set a smart phone alarm so you remember to take it at the same time every day.</p>",
+      "answers": [
+        {
+          "id": "ans_Meds_Water",
+          "answer": "Okay, I took my medication. Next question!",
+          "jump": "Water"
+        }
+      ]
+    },
+    {
+      "id": "Nap",
+      "question": "Take a nap. You can finish this self-care guide when you wake up.",
+      "description": "Ideally, let yourself sleep naturally, and sleep until you wake up. Obviously, this isn't always possible. Otherwise, set an alarm for yourself, with plenty of time to wake up and get yourself together between your nap and your responsibilities.",
+      "answers": [
+        {
+          "id": "ans_Nap_Pain",
+          "answer": "Okay, I'm well-rested now.",
+          "jump": "Pain"
+        }
+      ]
+    },
+    {
+      "id": "Ow",
+      "question": "If there is something your doctor has prescribed you for pain, you should take it or do it.",
+      "description": "<p>For aches and pains, take an aspirin. You may also want to apply a heating pad or a cold pack on whatever hurts.</p><p>If you have a stomach ache, there are medications for that, like Pepto Bismol, and hot tea may also help.</p><p>Be nice to your body, and try to do \"replace\" the unpleasant pain with some pleasant alternative sensations, like good smells and pleasurable textures.</p>",
+      "answers": [
+        {
+          "id": "ans_Ow_Discomfort",
+          "answer": "I am all taken care of.",
+          "jump": "Discomfort"
+        }
+      ]
+    },
+    {
+      "id": "Environment",
+      "question": "Are your surroundings the right temperature?",
+      "answers": [
+        {
+          "id": "ans_I_am_too_cold",
+          "answer": "I am too cold",
+          "jump": "I_am_too_cold"
+        },
+        {
+          "id": "ans_I_am_too_hot",
+          "answer": "I am too hot",
+          "jump": "I_am_too_hot"
+        },
+        {
+          "id": "ans_I_am_just_right",
+          "answer": "I an just right",
+          "jump": "I_am_just_right"
+        }
+      ]
+    },
+    {
+      "id": "Cleanliness",
+      "question": "Does your body feel uncomfortable, sweaty, or dirty?",
+      "answers": [
+        {
+          "id": "ans_ICKY",
+          "answer": "Yes, I feel icky, gross, or unclean.",
+          "jump": "ICKY"
+        },
+        {
+          "id": "ans_Do_You_Know",
+          "answer": "No, I feel fine.",
+          "jump": "Do_You_Know"
+        }
+      ]
+    },
+    {
+      "id": "I_do_not_know",
+      "question": "Sometimes, we don't know the source of our bad feelings, and that's okay. We're gonna work through this together!",
+      "answers": [
+        {
+          "id": "ans_not_know_Anxious",
+          "answer": "Okay!",
+          "jump": "Anxious"
+        }
+      ]
+    },
+    {
+      "id": "I_do_know",
+      "question": "It sounds like there's something on your mind! We're going to do our best to take care of it.",
+      "description": "<p>Set a timer for 15 minutes, and work on a solution. If it's something you can change, then great! If not, do your best to reach out to someone and talk about it.</p><p>Remember, 15 minutes and only 15! You can go back to whatever it is after we're done working through this together. We're just taking baby steps in the right direction.</p>",
+      "answers": [
+        {
+          "id": "ans_do_know_Anxious",
+          "answer": "Okay, I did my best.",
+          "jump": "Anxious"
+        }
+      ]
+    },
+    {
+      "id": "Specific",
+      "question": "You're feeling anxious about something specific.",
+      "description": "That's okay! Set a timer for 15 minutes and do something to take care of that worry. Maybe chip away at a task that seems insurmountable. You can do it!",
+      "answers": [
+        {
+          "id": "ans_Specific_Grounding",
+          "answer": "I'd like to try some grounding exercises too.",
+          "jump": "Grounding"
+        },
+        {
+          "id": "ans_Specific_Triggered",
+          "answer": "I feel better. Next question!",
+          "jump": "Triggered"
+        }
+      ]
+    },
+    {
+      "id": "Not_Specific",
+      "question": "You feel generally anxious, but you don't know why. That's okay!",
+      "answers": [
+        {
+          "id": "ans_Grounding",
+          "answer": "I'd like to try some grounding exercises.",
+          "jump": "Grounding"
+        }
+      ]
+    },
+    {
+      "id": "I_am_triggered",
+      "question": "f you're feeling triggered, see if there's a practical action you can take to lessen your distress. Can you block that unsafe person from your Facebook, for example?",
+      "description": "<p>If not, reach out and tell someone safe how you're feeling. Just express yourself! Human contact works wonders when you're not feeling well emotionally.</p><p>Remember that you're here in the present, and nothing from your past can hurt you. If you like, you may want to try some grounding exercises to reinforce that idea.</p>",
+      "answers": [
+        {
+          "id": "ans_Triggered_Dissociated",
+          "answer": "Okay, I'm ready for the next question.",
+          "jump": "Dissociated"
+        },
+        {
+          "id": "ans_Grounding",
+          "answer": "I'd like to try some grounding exercises.",
+          "jump": "Grounding"
+        }
+      ]
+    },
+    {
+      "id": "Grounding",
+      "question": "Here are some ideas for grounding activities:",
+      "description": "<ul><li>Take deep, calm breaths.</li><li>Notice and list things in your surroundings.</li><li>Expose yourself to strong, pleasant sensations, like a pleasing smell or a favorite blanket.</li><li>Say out loud your name, your age, the date, and your location. List some things you&#39;ve done today, or are going to do.</li><li>Splash water on your face or run your hands under the faucet.</li><li>Do a body scan meditation, or pay close attention to each of your body parts one by one.</li><li>Make tea. Feel the warmth of it in your hands, and the taste as you sip it calmly.</li><li>Listen to music.</li><li>Play a categories game, and name some types of dogs, or clothing items, or gemstones, or countries, or anything else you can think of.</li><li>Write in your journal.</li><li>Take a mindful walk, either inside or outside. Pay close attention to your body and your surroundings.</li><li>Squiggle. Wiggle around. Dance. Stretch. Be silly and active for a few minutes.</li><li>Any other favorite grounding technique you&#39;ve heard of or can think of. There&#39;s nothing wrong with experimenting!</li></ul>",
+      "answers": [
+        {
+          "id": "ans_Grounding_Anxious",
+          "answer": "Okay! I did one or more of these things, and I'm ready to move on.",
+          "jump": "Anxious"
+        }
+      ]
+    },
+    {
+      "id": "Depress_Fixes",
+      "question": "eeling depressed isn't fun, but it doesn't last forever! Don't be mad or disappointed with yourself for feeling depressed.",
+      "description": "Take 15 minutes and accomplish something small, like loading the dishwasher or making a friendship bracelet. You are not a failure, and your situation is not hopeless! You are a superhero, even if it doesn't feel like it.",
+      "answers": [
+        {
+          "id": "ans_Depress_Fixes_Lonely",
+          "answer": "Okay, I've done my best to take care of myself and I'm ready for the next question.",
+          "jump": "Lonely"
+        }
+      ]
+    },
+    {
+      "id": "Loneliness_Fixes",
+      "question": "Everybody feels lonely sometimes. If you're feeling lonely, there's ways to reach out to people!",
+      "description": "<p>You can talk to someone in your house, or call someone on the phone. You can also use texting or Facebook messenger to speak to someone. You may want to talk about how you're feeling, or you may not. Anything you want to talk about is okay!</p><p>If that isn't or doesn't seem possible, you can post a general message on Facebook, Tumblr, Vent, or another internet service, about whatever you want!</p>",
+      "answers": [
+        {
+          "id": "ans_Loneliness_Fixes_Foggy",
+          "answer": "Okay, I did my best to take care of myself and I'm ready for the next question",
+          "jump": "Foggy"
+        }
+      ]
+    },
+    {
+      "id": "Exercise",
+      "question": "If you are feeling foggy, you might need some exercise.",
+      "description": "Do you have the energy and ability to go for a walk?",
+      "answers": [
+        {
+          "id": "ans_Walk",
+          "answer": "Yes, a walk sounds great.",
+          "jump": "Walk"
+        },
+        {
+          "id": "ans_No_Walk",
+          "answer": "No, a walk would be too much for me.",
+          "jump": "No_Walk"
+        }
+      ]
+    },
+    {
+      "id": "Play_With_Cats",
+      "question": "Playing with pets can be a great way to take the edge off when you're not feeling well. It doesn't matter what kind of pet you have, just take some time to interact with them. Pet your cat, take your dog outside, feed your fish, hug your lizard...",
+      "answers": [
+        {
+          "id": "ans_Pets_Fun",
+          "answer": "Good idea! I'm ready for the next question.",
+          "jump": "Fun"
+        }
+      ]
+    },
+    {
+      "id": "I_need_some_help",
+      "question": "Making a meal is hard for you right now, and that's okay! Everybody struggles with cooking sometimes.",
+      "description": "<p>You have some options:</p><ul><li>You can cook a meal for yourself.</li><li>You might have ready-made meals in the fridge.</li><li>You can get take-out or delivery.</li><li>You can go to a restaurant.</li></ul><p>Take-out, delivery, and restaurants are a little more expensive than cooking on your own, but how you spend your money is your decision. It&#39;s okay to treat yourself!</p><p>If you&#39;re going to cook on your own, you have to decide what to make. A friend, partner, or family member can help with this. Here are some ideas for easy foods you can eat right now:</p><ul><li>Pasta with butter, sauce, cheese, vegetables, and/or meat</li><li>Ramen noodles</li><li>Sandwiches</li><li>Rice</li><li>Grilled cheese (This can have meat on it, if you want!)</li><li>A smoothie or milkshake</li><li>Baked or fried potatoes</li><li>Eggs, pancakes, and/or bacon</li><li>Macaroni and cheese</li><li>Canned soup</li><li>Salad</li><li>Boxed mashed potatoes</li></ul>",
+      "answers": [
+        {
+          "id": "ans_Full_Medication",
+          "answer": "Okay, I have some food in my stomach. Time for the next question!",
+          "jump": "Medication"
+        }
+      ]
+    },
+    {
+      "id": "I_am_too_cold",
+      "question": "If you're too cold, you can try putting on some warm clothes, using a space heater, turning up the heat in your home, putting on a blanket, and/or snuggling with a pet or another person.",
+      "answers": [
+        {
+          "id": "ans_not_too_cold",
+          "answer": "I'm not cold anymore.",
+          "jump": "I_am_just_right"
+        }
+      ]
+    },
+    {
+      "id": "I_am_too_hot",
+      "question": "If you're too hot, you can try putting on cooler clothes, turning on a fan, or turning up the AC in your house.",
+      "answers": [
+        {
+          "id": "not_too_hot",
+          "answer": "Okay, I fixed it.",
+          "jump": "I_am_just_right"
+        }
+      ]
+    },
+    {
+      "id": "I_am_just_right",
+      "question": "Are your surroundings dirty or smelly?",
+      "answers": [
+        {
+          "id": "ans_Gross",
+          "answer": "Yes, it's gross",
+          "jump": "Gross"
+        },
+        {
+          "id": "ans_Fine",
+          "answer": "No, it's fine",
+          "jump": "Fine"
+        }
+      ]
+    },
+    {
+      "id": "Gross",
+      "question": "It's hard to feel okay in an environment that is unfriendly for whatever reason. If your surroundings aren't clean, set a timer for five minutes and take care of the biggest problems, like leftover food, pet messes, or dirty clothes.",
+      "description": "Chores can be scary and exhausting, but that's not what we're doing here. We're just taking a little five-minute clean up to make ourselves and our homes happier!",
+      "answers": [
+        {
+          "id": "ans_Gross_Fine",
+          "answer": "Okay, I cleaned up a little!",
+          "jump": "Fine"
+        }
+      ]
+    },
+    {
+      "id": "Fine",
+      "question": "Do you feel unsafe because of the people, or lack of people, in your surroundings?",
+      "answers": [
+        {
+          "id": "ans_Too_Many_People",
+          "answer": "Yes, there are too many people here, or people I don't feel comfortable with.",
+          "jump": "Too_Many_People"
+        },
+        {
+          "id": "ans_Alone",
+          "answer": "I am alone and I don't like it.",
+          "jump": "Alone"
+        },
+        {
+          "id": "ans_Good_Cleanliness",
+          "answer": "No, I'm good.",
+          "jump": "Cleanliness"
+        }
+      ]
+    },
+    {
+      "id": "Too_Many_People",
+      "question": "If you can, try to remove yourself from situations that are overwhelming or feel unsafe. If you can't relocate entirely, take frequent breaks, or tune out with headphones.",
+      "answers": [
+        {
+          "id": "ans_People_Cleanliness",
+          "answer": "I reached out to someone and I'm feeling better. I'm ready for the next step.",
+          "jump": "Cleanliness"
+        }
+      ]
+    },
+    {
+      "id": "ICKY",
+      "question": "Do you have the energy and ability to take a shower?",
+      "answers": [
+        {
+          "id": "ans_Shower",
+          "answer": "Yes, I'll take a shower.",
+          "jump": "Shower"
+        },
+        {
+          "id": "ans_Another_Solution",
+          "answer": "No, I need another solution.",
+          "jump": "Another_Solution"
+        }
+      ]
+    },
+    {
+      "id": "Shower",
+      "question": "Take a shower and get dressed in new clothes afterwards. You'll feel much better!",
+      "answers": [
+        {
+          "id": "ans_Shower_Do_You_Know",
+          "answer": "I've done that and I'm ready for the next step.",
+          "jump": "Do_You_Know"
+        }
+      ]
+    },
+    {
+      "id": "Another_Solution",
+      "question": "If you are unable to take a shower, here are some things to do instead",
+      "description": "<ul><li>Wash your face</li><li>Put on lotion</li><li>Change your clothes</li><li>Use dry shampoo</li><li>Whatever physical self-care activity you like best!</li></ul>",
+      "answers": [
+        {
+          "id": "ans_Another_Solution_Do_You_Know",
+          "answer": "I'm clean and I'm ready for the next step.",
+          "jump": "Do_You_Know"
+        }
+      ]
+    },
+    {
+      "id": "Walk",
+      "question": "Walks are really good for both our bodies and our minds. Take a walk of whatever length you choose! You're not trying to burn calories or get to a particular destination; you're just taking a pleasant stroll. Enjoy it!",
+      "answers": [
+        {
+          "id": "ans_Walk_Pets",
+          "answer": "Okay, I am back from my walk and I'm ready for the next question.",
+          "jump": "Pets"
+        }
+      ]
+    },
+    {
+      "id": "No_Walk",
+      "question": "If you can't take a walk, that's okay!",
+      "description": "<p>Here are some alternatives:</p><ul><li>Jumping jacks</li><li>Bouncing on the bed</li><li>Dancing</li><li>Push ups or sit ups, if you like doing them</li><li>Walking up and down the stairs</li><li>Yoga</li><li>Wiggling, squirming, jiggling around; being silly and active and having fun!</li></ul><p>If none of those are or seem possible, just sit outside for some fresh air!</p>",
+      "answers": [
+        {
+          "id": "ans_No_Walk_Pets",
+          "answer": "Okay, I did some exercise to the best of my ability. I'm ready for the next question.",
+          "jump": "Pets"
         }
       ]
     }
