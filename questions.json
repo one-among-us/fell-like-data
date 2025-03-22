@@ -456,7 +456,7 @@
     },
     {
       "id": "Depress_Fixes",
-      "question": "eeling depressed isn't fun, but it doesn't last forever! Don't be mad or disappointed with yourself for feeling depressed.",
+      "question": "feeling depressed isn't fun, but it doesn't last forever! Don't be mad or disappointed with yourself for feeling depressed.",
       "description": "Take 15 minutes and accomplish something small, like loading the dishwasher or making a friendship bracelet. You are not a failure, and your situation is not hopeless! You are a superhero, even if it doesn't feel like it.",
       "answers": [
         {
@@ -595,6 +595,17 @@
       "answers": [
         {
           "id": "ans_People_Cleanliness",
+          "answer": "I reached out to someone and I'm feeling better. I'm ready for the next step.",
+          "jump": "Cleanliness"
+        }
+      ]
+    },
+    {
+      "id": "Alone",
+      "question": "Being alone can feel really scary and unsafe. In reality, if you take basic precautions, you're almost certainly fine! However, getting a friend, making a phone or Skype call, playing with a pet, and/or turning on the TV or music can help.",
+      "answers": [
+        {
+          "id": "ans_Alone_Cleanliness",
           "answer": "I reached out to someone and I'm feeling better. I'm ready for the next step.",
           "jump": "Cleanliness"
         }
