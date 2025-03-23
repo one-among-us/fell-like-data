@@ -159,7 +159,7 @@
         {
           "id": "ans_I_am_triggered_2",
           "answer": "I was feeling triggered, but I did my best to take care of myself. I'm ready for the next question.",
-          "jump": "I_am_triggered"
+          "jump": "Dissociated"
         }
       ]
     },
@@ -419,7 +419,7 @@
       "question": "You feel generally anxious, but you don't know why. That's okay!",
       "answers": [
         {
-          "id": "ans_Grounding",
+          "id": "ans_Specific_Grounding",
           "answer": "I'd like to try some grounding exercises.",
           "jump": "Grounding"
         }
@@ -436,7 +436,7 @@
           "jump": "Dissociated"
         },
         {
-          "id": "ans_Grounding",
+          "id": "ans_Specific_Grounding",
           "answer": "I'd like to try some grounding exercises.",
           "jump": "Grounding"
         }
